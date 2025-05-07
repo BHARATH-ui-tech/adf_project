@@ -1,0 +1,73 @@
+{
+    "name": "DelimitedText2",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureDataLakeStorage1",
+            "type": "LinkedServiceReference"
+        },
+        "parameters": {
+            "fileName": {
+                "type": "string"
+            }
+        },
+        "annotations": [],
+        "type": "DelimitedText",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": {
+                    "value": "@dataset().fileName",
+                    "type": "Expression"
+                },
+                "fileSystem": "ftpfiles"
+            },
+            "columnDelimiter": ",",
+            "escapeChar": "\\",
+            "firstRowAsHeader": true,
+            "quoteChar": "\""
+        },
+        "schema": [
+            {
+                "name": "Card Type Full Name",
+                "type": "String"
+            },
+            {
+                "name": "Issuing Bank",
+                "type": "String"
+            },
+            {
+                "name": "Card Number",
+                "type": "String"
+            },
+            {
+                "name": "Card Holder's Name",
+                "type": "String"
+            },
+            {
+                "name": "CVV/CVV2",
+                "type": "String"
+            },
+            {
+                "name": "Issue Date",
+                "type": "String"
+            },
+            {
+                "name": "Expiry Date",
+                "type": "String"
+            },
+            {
+                "name": "Billing Date",
+                "type": "String"
+            },
+            {
+                "name": "Card PIN",
+                "type": "String"
+            },
+            {
+                "name": "Credit Limit",
+                "type": "String"
+            }
+        ]
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}

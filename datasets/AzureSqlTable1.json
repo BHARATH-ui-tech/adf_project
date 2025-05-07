@@ -1,0 +1,42 @@
+{
+    "name": "AzureSqlTable1",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "LS_SQL",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "AzureSqlTable",
+        "schema": [
+            {
+                "name": "sourceType",
+                "type": "nvarchar"
+            },
+            {
+                "name": "sourceTable",
+                "type": "nvarchar"
+            },
+            {
+                "name": "directory",
+                "type": "nvarchar"
+            },
+            {
+                "name": "fileName",
+                "type": "nvarchar"
+            },
+            {
+                "name": "outputFormat",
+                "type": "nvarchar"
+            },
+            {
+                "name": "active",
+                "type": "bit"
+            }
+        ],
+        "typeProperties": {
+            "schema": "dbo",
+            "table": "SourceConfig"
+        }
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
